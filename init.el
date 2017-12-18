@@ -87,12 +87,33 @@
 (add-hook 'html-mode-hook 'emmet-mode)
 
 ;; #############################################
+;; ############## Ample themes  ################
+;; #############################################
+
+;; Comment/uncomment lines to toggle theme
+
+;; (load-theme 'ample t t)
+;; (enable-theme 'ample)
+
+(load-theme 'ample-flat t t)
+(enable-theme 'ample-flat)
+
+;; (load-theme 'ample-light t t)
+;; (enable-theme 'ample-light)
+
+;; #############################################
 ;; ###### Disable menu/tool/scroll bars ########
 ;; #############################################
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
+
+;; #############################################
+;; ######### Disable blinking cursor ###########
+;; #############################################
+
+(blink-cursor-mode 0)
 
 ;; #############################################
 ;; ################# Custom ####################

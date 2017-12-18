@@ -6,29 +6,26 @@
 ;; ##### initializing package repositories #####
 ;; #############################################
 
-(setq package-list '(js2-mode
+(setq package-list '(
+		     js2-mode
 		     js2-refactor
 		     xref-js2
 		     company-tern
 		     avy
-		     emmet-mode))
+		     emmet-mode
+		     ample-theme
+		     ))
 
+(package-initialize)
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
 			 ("marmalade" . "https://marmalade-repo.org/packages/")
 			 ("melpa" . "https://melpa.org/packages/")))
 
-;; activate all the packages (in particular autoloads)
-(package-initialize)
-
-;; fetch the list of packages available
-(unless package-archive-contents
-  (package-refresh-contents))
-
-;; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
-    (package-install-package)))
+    (package-install package))
+  (require package))
 
 ;; #############################################
 ;; ################ js2-mode ###################

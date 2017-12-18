@@ -4,23 +4,9 @@
 
 (require 'package)
 (package-initialize)
-;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
 			 ("marmalade" . "https://marmalade-repo.org/packages/")
 			 ("melpa" . "https://melpa.org/packages/")))
-
-;; #############################################
-;; ################### ??? #####################
-;; #############################################
-;; custom-set-variables was added by Custom.
-;; If you edit it by hand, you could mess it up, so be careful.
-;; Your init file should contain only one such instance.
-;; If there is more than one, they won't work right.
-(custom-set-variables
- '(package-selected-packages (quote (avy company-tern xref-js2 js2-refactor js2-mode))))
-(custom-set-faces
- )
 
 ;; #############################################
 ;; ################ js2-mode ###################
@@ -69,9 +55,33 @@
 ;; ################## avy  #####################
 ;; #############################################
 
-;; (global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
-;; (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
-;; (global-set-key (kbd "s-w") 'ace-window)
-
 (global-set-key (kbd "C-.") 'avy-goto-char)
 (global-set-key (kbd "C-,") 'avy-goto-line)
+
+;; #############################################
+;; ################# emmet  ####################
+;; #############################################
+
+(add-hook 'html-mode-hook 'emmet-mode)
+
+;; #############################################
+;; ################# Custom ####################
+;; #############################################
+;; custom-set-variables was added by Custom.
+;; If you edit it by hand, you could mess it up, so be careful.
+;; Your init file should contain only one such instance.
+;; If there is more than one, they won't work right.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (emmet-mode avy company-tern xref-js2 js2-refactor js2-mode))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

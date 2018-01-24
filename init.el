@@ -14,6 +14,7 @@
 		     avy
 		     emmet-mode
 		     ample-theme
+		     ace-window
 		     ))
 
 (package-initialize)
@@ -83,6 +84,12 @@
 (global-set-key (kbd "C-,") 'avy-goto-line)
 
 ;; #############################################
+;; ############### ace-window  #################
+;; #############################################
+
+(global-set-key (kbd "M-o") 'ace-window)
+
+;; #############################################
 ;; ################# emmet  ####################
 ;; #############################################
 
@@ -137,7 +144,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (emmet-mode avy company-tern xref-js2 js2-refactor js2-mode))))
+    (ace-window emmet-mode avy company-tern xref-js2 js2-refactor js2-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

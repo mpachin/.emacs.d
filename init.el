@@ -87,7 +87,7 @@
 ;; ############### ace-window  #################
 ;; #############################################
 
-(global-set-key (kbd "M-o") 'ace-window)
+(global-set-key (kbd "C-<tab>") 'ace-window)
 
 ;; #############################################
 ;; ################# emmet  ####################
@@ -143,7 +143,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
+p   (quote
     (ace-window emmet-mode avy company-tern xref-js2 js2-refactor js2-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

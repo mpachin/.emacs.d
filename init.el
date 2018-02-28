@@ -15,6 +15,7 @@
 		     emmet-mode
 		     ample-theme
 		     ace-window
+		     flycheck
 		     ))
 
 (package-initialize)

@@ -145,6 +145,12 @@
 (push (cons "\\*shell\\*" display-buffer--same-window-action) display-buffer-alist)
 
 ;; #############################################
+;; ##### buffer-menu instead list-buffers ######
+;; #############################################
+
+(global-set-key "\C-x\C-b" 'buffer-menu)
+
+;; #############################################
 ;; ################# Custom ####################
 ;; #############################################
 ;; custom-set-variables was added by Custom.

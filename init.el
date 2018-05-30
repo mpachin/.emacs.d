@@ -155,12 +155,15 @@
 ;; ################# icons #####################
 ;; #############################################
 
-;;run
-;;M-x all-the-icons-install-fonts
-;;after first evaling init.el
+;; run
+;; M-x all-the-icons-install-fonts
+;; after first evaling init.el
 (require 'all-the-icons)
 
-;;hook for dired icons
+;; hook for dired icons
+;; run
+;; $ git submodule init && git submodule update
+;; for downloading all-the-icons-dired-mode from github
 (add-to-list 'load-path "~/.emacs.d/github_clones/all-the-icons-dired")
 (load "all-the-icons-dired.el")
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)

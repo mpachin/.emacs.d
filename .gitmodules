@@ -1,0 +1,3 @@
+[submodule "github_clones/all-the-icons-dired"]
+	path = github_clones/all-the-icons-dired
+	url = https://github.com/jtbm37/all-the-icons-dired.git

@@ -16,6 +16,7 @@
 		     ample-theme
 		     ace-window
 		     flycheck
+		     all-the-icons
 		     ))
 
 (package-initialize)
@@ -151,6 +152,20 @@
 (global-set-key "\C-x\C-b" 'buffer-menu)
 
 ;; #############################################
+;; ################# icons #####################
+;; #############################################
+
+;;run
+;;M-x all-the-icons-install-fonts
+;;after first evaling init.el
+(require 'all-the-icons)
+
+;;hook for dired icons
+(add-to-list 'load-path "~/.emacs.d/github_clones/all-the-icons-dired")
+(load "all-the-icons-dired.el")
+(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+
+;; #############################################
 ;; ################# Custom ####################
 ;; #############################################
 ;; custom-set-variables was added by Custom.
@@ -164,7 +179,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ace-window emmet-mode avy company-tern xref-js2 js2-refactor js2-mode))))
+    (all-the-icons-dired-mode all-the-icons ace-window emmet-mode avy company-tern xref-js2 js2-refactor js2-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

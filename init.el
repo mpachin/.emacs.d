@@ -189,3 +189,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(when (eq system-type 'darwin)
+  ;; use all the special keys on the mac keyboard
+  (setq mac-option-modifier nil
+	ns-function-modifier 'super
+	mac-right-command-modifier 'hyper
+	mac-right-option-modifier 'alt
+	mac-command-modifier 'meta))
